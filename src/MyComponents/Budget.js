@@ -16,7 +16,7 @@ export default function Budget() {
   // Function to fetch data and update pie chart
   const fetchData = useCallback(async () => {
     try {
-      const response = await axios.post('http://192.168.1.6:5000/predict', {
+      const response = await axios.post('https://ml-api-298v.onrender.com/predict', {
         income: totalBudget, // Pass total budget as income for prediction
       });
       const data = (response.data[0]);
